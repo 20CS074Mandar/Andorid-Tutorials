@@ -46,5 +46,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+        val btnSuspendFunctionsAcitiy:Button=findViewById(R.id.btnSuspednFunctions)
+        btnSuspendFunctionsAcitiy.setOnClickListener {
+            Intent(this@MainActivity,SuspendFunctionsActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        val btnRunBlockingActivity:Button=findViewById(R.id.btnRunblockingActivity)
+        btnRunBlockingActivity.setOnClickListener {
+            Intent(this@MainActivity,RunBlockingActivity::class.java).also {
+                startActivity(it)
+                finish()
+            }
+        }
+        val btnJobWaitingCancelActivitiy:Button=findViewById(R.id.btnJobWaitingCancel)
+        btnJobWaitingCancelActivitiy.setOnClickListener {
+
+            Intent(this@MainActivity,JobWaitingCancelActivitiy::class.java).also {
+                startActivity(it)
+            }
+        }
+
     }
 }
